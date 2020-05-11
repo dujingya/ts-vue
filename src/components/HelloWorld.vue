@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h1 @click="emitBtn">{{ title }}</h1>
+
     <el-button @click="addRow">增加</el-button>
     <el-table
             :data="tableData"
@@ -93,7 +95,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class HelloWorld extends Vue {
@@ -150,7 +152,7 @@ export default class HelloWorld extends Vue {
   private dialogFormVisible: boolean = false
   private Index: number = 0
   private dataIndex: number = 0
-  private form = {
+  private form: { name: string, date: string, province: string, city: string, address: string, zip: number} = {
     name: '',
     date: '',
     province: '',
@@ -158,14 +160,21 @@ export default class HelloWorld extends Vue {
     address: '',
     zip: 0,
   }
-  @Prop() private msg!: string
   private isShow: boolean = false
   private dislog: boolean = false
+  private message: string = '这是子元素传过来的'
+
   public created() {
     this.isShow = true
   }
   public mounted() {
     this.dislog =  false
+  }
+  @Prop() private msg!: string
+  @Prop() private title!: string
+  @Emit() private emitBtn() {
+    alert(this.message)
+    return this.message
   }
   public deleteRow(index: number, rows: any): void {
     this.dataIndex = 0
@@ -204,11 +213,11 @@ export default class HelloWorld extends Vue {
   }
   public confirm() {
     if (this.dataIndex === 0) {
-
+      alert(1111)
     } else if (this.dataIndex === 1) {
       this.$set(this.tableData, this.Index, this.form)
     } else if (this.dataIndex === 2) {
-
+      alert(222)
     } else {
       this.tableData.push(this.form)
     }
