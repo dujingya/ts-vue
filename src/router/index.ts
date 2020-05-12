@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
+console.log(process.env, '环境变量')
 
 const routes: RouteConfig[] = [
   {

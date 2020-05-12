@@ -9,6 +9,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/nprogress": "0.0.29",
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "fs": "^0.0.1-security",
     "glob-all": "^3.2.1",
@@ -31,5 +33,10 @@
     "sass-loader": "^8.0.2",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   }
 }

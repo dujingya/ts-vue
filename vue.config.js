@@ -1,5 +1,5 @@
 // vue.config.js
-console.log(process.env.VUE_APP_CURRENTMODE, 11111111)
+console.log(process.env, 11111111)
 module.exports = {
     // 选项...
     // 当使用基于 HTML5 history.pushState 的路由时；
@@ -27,6 +27,12 @@ module.exports = {
     crossorigin:undefined,
     // 在生成的 HTML 中的 <link rel="stylesheet"> 和 <script> 标签上启用 Subresource Integrity (SRI)。如果你构建后的文件是部署在 CDN 上的，启用该选项可以提供额外的安全性。需要注意的是该选项仅影响由 html-webpack-plugin 在构建时注入的标签 - 直接写在模版 (public/index.html) 中的标签不受影响。另外，当启用 SRI 时，preload resource hints 会被禁用，因为 Chrome 的一个 bug 会导致文件被下载两次。
     integrity:false,
+    // 允许对内部的webpack配置进行更细粒度的修改
+    chainWebpack: (config) => {},
+    // 合并webpack 配置项
+    configureWebpack: {
+        watch: true // 在这里添加监听变化后实时打包 watch:true
+    },
     // 反向代理
     devServer: {
         open: true, //浏览器自动打开页面
