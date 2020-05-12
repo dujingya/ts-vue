@@ -9,19 +9,21 @@
     ]
   },
   "rules": {
-//    "no-console": [true, "log", "dir", "table"],
     "indent": [true, "spaces", 2],
     "interface-name": false,
-    "member-ordering": false,
     "no-consecutive-blank-lines": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     "quotemark": [true, "single"],
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "named": "always",
-      "asyncArrow": "always"
-    }],
-    "semicolon": [true, "never"]
+    "semicolon":[false, "always", "ignore-interfaces"], //分号的使用规则
+    "trailing-comma": [false, { //对尾随逗号的校验
+      "multiline": {
+        "objects": "ignore",
+        "arrays": "never",
+        "functions": "never",
+        "typeLiterals": "ignore"
+      },
+      "esSpecCompliant": true //是否允许尾随逗号出现在剩余变量中
+    }]
   }
 }
