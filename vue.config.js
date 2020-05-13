@@ -1,5 +1,5 @@
 // vue.config.js
-console.log(process.env, 11111111)
+// console.log(process.env.publicPath, 11111111)
 module.exports = {
     // 选项...
     // 当使用基于 HTML5 history.pushState 的路由时；

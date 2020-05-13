@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import Home from '../views/Home.vue';
+// import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 console.log(process.env, '环境变量')
@@ -9,7 +9,7 @@ const routes: RouteConfig[] = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: () => import('../views/Home.vue'),
   },
   {
     path: '/about',
@@ -20,11 +20,18 @@ const routes: RouteConfig[] = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
 ];
-
+console.log(process.env.BASE_URL, 8888)
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.publicPath,
+  base: process.env.BASE_URL,
   routes,
+  scrollBehavior(to, from, savedPostion) {
+      if (savedPostion) {
+          return savedPostion
+      } else {
+          return { x: 0, y: 0 }
+      }
+  }
 });
 
 export default router;
