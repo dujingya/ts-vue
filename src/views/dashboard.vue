@@ -9,11 +9,15 @@
 // @ is an alias to /src
 import HelloWorld from '../components/HelloWorld'
 import { Component, Vue, Model } from 'vue-property-decorator';
+import { getDataList } from '../request/index'
 @Component({
     components: {
         HelloWorld
     }
 })
-export default class Home extends Vue {
+export default class Dashboard extends Vue {
+    private created() {
+      console.log(1111)
+    }
 }
 </script>

@@ -9,13 +9,34 @@
     ]
   },
   "rules": {
+    "member-access": [false , "no-public", "check-accessor", "check-constructor" , "check-parameter-property"  ],
+    "prefer-for-of": false,
+    "promise-function-async": false,
+    "only-arrow-functions": [true, "allow-declarations", "allow-named-functions"],
     "no-console": false,
+    "no-for-in-array": false,
+    "no-empty": false,
+    "no-invalid-this": false,
+    "no-null-keyword": false,
+    "no-trailing-whitespace": false,
+    "comment-format": [
+      false,
+      "check-space"
+    ],
+    "eofline": false,
     "indent": [true, "spaces", 2],
     "interface-name": false,
     "no-consecutive-blank-lines": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    "quotemark": [true, "single"],
+    "one-line": [
+      false,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+    "quotemark": [false, "single"],
     "semicolon":[false, "always", "ignore-interfaces"], //分号的使用规则
     "trailing-comma": [false, { //对尾随逗号的校验
       "multiline": {
