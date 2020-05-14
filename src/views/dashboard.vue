@@ -16,7 +16,7 @@ import { getDataList } from '../request/index'
     }
 })
 export default class Dashboard extends Vue {
-    private created() {
+    created() {
       console.log(1111)
     }
 }
