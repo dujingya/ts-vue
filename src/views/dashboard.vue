@@ -5,9 +5,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 // @ is an alias to /src
-import HelloWorld from '../components/HelloWorld'
+import HelloWorld from '@/components/HelloWorld.vue'
 import { Component, Vue, Model } from 'vue-property-decorator';
 import { getDataList } from '../request/index'
 @Component({
@@ -16,8 +16,20 @@ import { getDataList } from '../request/index'
     }
 })
 export default class Dashboard extends Vue {
-    created() {
+    private str: string = '';
+    private hello: string = "Hello World!"
+    private params: { beginIndex: number, endIndex: number, search: ''} = {
+      beginIndex: 0,
+      endIndex: 10,
+      search: ''
+    }
+    private created() {
       console.log(1111)
+    }
+    private mounted() {
+        getDataList(this.params).then((res) => {
+            console.log(res, 2222222)
+        })
     }
 }
 </script>

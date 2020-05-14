@@ -1,20 +1,24 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false, // 不严格检测
     "jsx": "preserve",
+    "allowJs": true, // 包容一下router
     "importHelpers": true,
+    "noImplicitAny": false, // 可以将null赋值，这个是为了不让this.obj = null报错
     "moduleResolution": "node",
-    "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "node"
+      "webpack-env",
+      "mocha",
+      "chai"
     ],
-    "paths": {
+    "paths": { // @指向的地址
       "@/*": [
         "src/*"
       ]

@@ -1,11 +1,11 @@
 import Axios from 'axios';
 import { Message } from 'element-ui';
 import { getToken } from '../utils/auth';
-
+import {baseUrl} from "../request/api";
 const httpServer = (opts: any) => {
     const httpDefaultOpts = { // http默认配置
         method: opts.method,
-        baseURL: 'https://xxxx.com',  // 测试
+        baseURL: baseUrl,  // 测试
         url: opts.url,
         timeout: 100000,
         params: opts.params,

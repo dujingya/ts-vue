@@ -9,22 +9,29 @@
     ]
   },
   "rules": {
-    "member-access": [false , "no-public", "check-accessor", "check-constructor" , "check-parameter-property"  ],
-    "prefer-for-of": false,
-    "promise-function-async": false,
-    "only-arrow-functions": [true, "allow-declarations", "allow-named-functions"],
     "no-console": false,
     "no-for-in-array": false,
     "no-empty": false,
     "no-invalid-this": false,
     "no-null-keyword": false,
+    "eol-last": false,//文件以单一的换行符结束
+    "init-declarations": false,//声明时必须赋初值
+    "key-spacing": [false, { "beforeColon": false, "afterColon": true }],//对象字面量中冒号的前后空格
+    "padded-blocks": false,//块语句内行首行尾是否要空行
+    "prefer-const": false,//首选const
+    "newline-after-var": false,//变量声明后是否需要空一行
+    "quote-props":[false, "always"],//对象字面量中的属性名是否强制双引号
+    "semi-spacing": [false, {"before": false, "after": true}],//分号前后空格
     "no-trailing-whitespace": false,
+    "space-after-keywords": [false, "always"],//关键字后面是否要空一格
+    "space-before-blocks": [false, "always"],//不以新行开始的块{前面要不要有空格
+    "space-before-function-paren": [false, "always"],//函数定义时括号前面要不要有空格
     "comment-format": [
       false,
       "check-space"
     ],
     "eofline": false,
-    "indent": [true, "spaces", 2],
+    "indent": [2, 4],//缩进风格
     "interface-name": false,
     "no-consecutive-blank-lines": false,
     "object-literal-sort-keys": false,
