@@ -18,6 +18,22 @@ const routes: RouteConfig[] = [
                 main: true
             },
             component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard.vue'),
+        },
+        {
+            path: 'about',
+            name: 'about',
+            meta: {
+                main: true
+            },
+            component: () => import(/* webpackChunkName: "dashboard" */ '@/views/About.vue'),
+        },
+        {
+            path: 'home',
+            name: 'dashboard',
+            meta: {
+                main: true
+            },
+            component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard.vue'),
         }
     ]
   },
@@ -30,9 +46,6 @@ const routes: RouteConfig[] = [
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
     meta: { main: true },
     children: [
@@ -45,10 +58,7 @@ const routes: RouteConfig[] = [
   {
     path: '/test',
     name: 'Test',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/views/test/index.vue'),
+    component: () => import(/* webpackChunkName: "test" */ '@/views/test/index.vue'),
     meta: { main: true },
     children: [
         // {

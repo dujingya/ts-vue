@@ -8,7 +8,7 @@
             <!-- 主要内容 -->
             <div class="t-po-r">
                 <AppMain></AppMain>
-                <div class="AppMainBo">欢迎来到悦店后台管理系统</div>
+                <div class="AppMainBo">欢迎来到后台管理系统</div>
                 <div class="t-prompt-content">
                     <Prompt></Prompt>
                 </div>

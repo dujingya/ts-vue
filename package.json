@@ -20,6 +20,7 @@
     "html-webpack-plugin": "^4.3.0",
     "js-base64": "^2.5.2",
     "js-cookie": "^2.2.1",
+    "jspdf": "^1.5.3",
     "path": "^0.12.7",
     "prerender-spa-plugin": "^3.4.0",
     "puppeteer": "^3.0.4",
@@ -40,11 +41,15 @@
     "@vue/cli-plugin-typescript": "^4.3.0",
     "@vue/cli-plugin-vuex": "^4.3.0",
     "@vue/cli-service": "^4.3.0",
+    "file-saver": "^2.0.2",
+    "html2canvas": "^1.0.0-rc.5",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
+    "script-loader": "^0.7.2",
     "ts-loader": "^7.0.4",
     "typescript": "~3.8.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "xlsx": "^0.16.1"
   },
   "postcss": {
     "plugins": {
