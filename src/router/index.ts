@@ -81,7 +81,7 @@ const routes: RouteConfig[] = [
 ];
 // console.log(process.env.BASE_URL, 8888)
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes,
   scrollBehavior(to, from, savedPostion) {
